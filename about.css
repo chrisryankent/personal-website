@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.header {
+    background-color: black;
+    color: blue;
+    height: 200px;
+    padding: 20px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.center { 
+    margin-top: 90px;
+    text-align: center;
+}
+.active {
+    color: blue;
+}
+ul li a:hover {
+    background-color: blue;
+    color: black;
+    transform: scale(0.9);
+    transition: 1s ease-in-out;
+}
+.font {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.to-grid, .todo-input-grid {
+    display: block;
+    justify-content: space-between;
+}
+.todo-input-grid {
+    margin-bottom: 10px;
+} 
+.items {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.banner {
+    text-align: center;
+    padding: 20px;
+}
+.banner img {
+    margin-top:-60px ;
+    max-width: 150px;
+    border-radius: 50%;
+    height: 200px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+footer a {
+    color: #77aaff;
+}
+@media (max-width: 768px) {
+    header nav, header #branding {
+        float: none;
+        text-align: center;
+    }
+    .about img, .about p {
+        max-width: 100%;
+    }
+}
+.color{
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+.center1{
+    width: 300px;
+    height: 310px;
+    border: none;
+    border-radius: 200px;
+    align-self: left;
+}

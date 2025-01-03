@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Chris Kent</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="boot/css/bootstrap.min.css">
+    <link rel="stylesheet" href="boot/css/w3.css">
+    <style>
+         .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header{
+            width: 20%;
+        }
+        .main{
+            margin-left: 25%;
+        }
+
+        .sidebar-nav a {
+            width: 100%;
+        }
+
+        .sidebar-img {
+            display: flex;
+            justify-content: center;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-up {
+            opacity: 0;
+            animation-name: slideUp;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 767px) {
+            .header {
+                width: 80%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                z-index: 1050;
+                overflow-y: auto;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+            
+            .header.show {
+                transform: translateX(0);
+            }
+            
+            .container {
+                margin-left: 0;
+                padding: 10px;
+            }
+            
+            .sidebar-img img {
+                width: 50%;
+            }
+
+            .no-scroll {
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div class="header w3-sidebar w3-card-4 w3-amber w3-bar-block w3-hover-sepia collapse d-md-block" id="sidebar">
+        <button class="btn btn-danger d-md-none mb-3" id="closeSidebar">Close Sidebar</button>
+        <nav class="sidebar-nav">
+            <ul class="nav flex-column">
+                <li class="nav-item text-center">
+                    <a href="index.html" class="nav-link active w3-border-bottom w3-border-black w3-button mb-2">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a href="about.html" class="nav-link w3-border-bottom w3-border-black w3-button mb-2">About</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a href="contact.html" class="nav-link w3-border-bottom w3-border-black w3-button mb-2">Contact Me</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a href="project.html" class="nav-link w3-border-bottom w3-border-black w3-button">Projects</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-img">
+            <img class="center1 mx-auto d-block" src="ck.jpg" alt="Profile Image">
+        </div>
+        <hr class="cp" style="color: #000;">
+        <h3 class="text-center">&copy; Chris Kent</h3>
+    </div>
+    <button class="btn btn-primary d-md-none mb-3" id="sidebarToggle">Toggle Sidebar</button>
+
+    <div class="container content">
+        <div class="w3-display-container w3-text-white mb-4">
+            <img src="Person.jpg" alt="Background Image" style="width:100%;height: 500px; filter: blur(2px);">
+            <div class="w3-display-middle w3-small w3-text-black">
+                <h1 class="text-center">I am Chris Kent</h1>
+                <p>
+                    I have a degree in Computer Science from Metropolitan University. 
+                    I am a certified programmer, collaborating with my colleagues Nathan and Allan. 
+                    With a passion for creating impactful solutions, I focus on developing innovative software that bridges gaps and solves real-world problems. 
+                    Beyond coding, I enjoy teaching, sharing my knowledge, and inspiring the next generation of developers.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sunt delectus illum omnis eligendi. 
+                    Error ex, deserunt, nisi aliquam distinctio unde quidem enim libero sapiente aperiam aut obcaecati animi! Dolor?
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="text-center p-3">
+                <div class="w3-row-padding w3-margin-top">
+                    <h4 class="text-center text-white font">Team I Have Worked With</h4>
+                    <br>
+                    <div class="w3-third w3-circle">
+                        <div class="">
+                            <img src="flipsnack-LUqSTRx3_Ig-unsplash.jpg" style="width:100%" class="center1">
+                            <div class="w3-container">
+                                <h5 class="text-white">Ankunda Dansan</h5>
+                                <p class="text-white">A dedicated team member with expertise in project management and software development.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w3-third">
+                        <div class="">
+                            <img src="musemind-ux-agency-uzYTEWxWsm4-unsplash.jpg" style="width:100%" class="center1">
+                            <div class="w3-container">
+                                <h5 class="text-white">Victor</h5>
+                                <p class="text-white">A creative mind who excels in UI/UX design and front-end development.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w3-third">
+                        <div class="">
+                            <img src="boot/back1.jpeg" style="width:100%" class="center1">
+                            <div class="w3-container">
+                                <h5 class="text-white">Nathan</h5>
+                                <p class="text-white">An exceptional coder with a knack for back-end development and database management.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <section class="my-5">
+                        <h2 class="text-center text-white">Let's Connect</h2>
+                        <p class="text-center text-white">
+                            Feel free to reach out if you want to <span style="font-style: italic;">collaborate, chat, share ideas, or simply connect</span>. Let's make something amazing together!
+                        </p>
+                        <div class="text-center">
+                            <a href="https://twitter.com/yourhandle" class="btn btn-outline-primary mx-2" target="_blank">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                            <a href="https://www.linkedin.com/in/yourhandle" class="btn btn-outline-primary mx-2" target="_blank">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/yourhandle" class="btn btn-outline-primary mx-2" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <!-- Add more handles as needed -->
+                        </div>
+                    </section>
+                </div>
+
+                <p>
+                    Check out my <a href="project.html" class="text-info">Projects</a> or get in touch via the <a href="contact.html" class="text-info">Contact</a> page.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <div class="container mb-5">    
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="w3-card-4 slide p-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi aut, mollitia deleniti totam soluta, harum, dolorum fugiat quo aliquam commodi iure quisquam accusamus impedit voluptas culpa libero voluptate doloremque.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="w3-card-4 slide p-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi aut, mollitia deleniti totam soluta, harum, dolorum fugiat quo aliquam commodi iure quisquam accusamus impedit voluptas culpa libero voluptate doloremque.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="w3-card-4 slide p-3">
+                    <img src="boot/back1.jpeg" alt="" style="width: 100%;">
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="w3-card-4 slide p-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi aut, mollitia deleniti totam soluta, harum, dolorum fugiat quo aliquam commodi iure quisquam accusamus impedit voluptas culpa libero voluptate doloremque.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="w3-card-4 slide p-3">
+                    <img src="boot/back.jpeg" alt="" style="width: 100%;">
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="w3-card-4 slide p-3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quasi aut, mollitia deleniti totam soluta, harum, dolorum fugiat quo aliquam commodi iure quisquam accusamus impedit voluptas culpa libero voluptate doloremque.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-white mt-4">
+        <p>Connect with me on <a href="#" class="text-info">LinkedIn</a>, <a href="#" class="text-info">GitHub</a>, and <a href="#" class="text-info">Twitter</a>.</p>
+    </footer>
+
+    <script src="boot/js/w3.js"></script>
+    <script>
+        w3.slideshow('.slide', 1000);
+
+
+                                  // Sidebar toggle functionality for small devices
+    document.getElementById('sidebarToggle').addEventListener('click', function () {
+        document.getElementById('sidebar').classList.add('show');
+        document.body.classList.toggle('no-scroll');
+    });
+
+    document.getElementById('closeSidebar').addEventListener('click', function () {
+        document.getElementById('sidebar').classList.remove('show');
+    });
+    </script>
+</body>
+
+</html>

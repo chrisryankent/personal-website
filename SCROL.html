@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+.animate-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.animate-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+<body>
+    <div class="animate-up">This element will animate up when you scroll down.</div>
+    <div class="animate-up">Another element with the same animation.</div>
+    <!-- Add more elements as needed -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elements = document.querySelectorAll('.animate-up');
+
+    function checkPosition() {
+        var windowHeight = window.innerHeight;
+        elements.forEach(function(element) {
+            var positionFromTop = element.getBoundingClientRect().top;
+
+            if (positionFromTop - windowHeight <= 0) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkPosition);
+    checkPosition(); // Initial check
+});
+
+    </script>
+</body>
+</html>
+
